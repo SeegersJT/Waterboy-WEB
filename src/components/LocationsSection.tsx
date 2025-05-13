@@ -1,0 +1,79 @@
+
+import { Card, CardContent } from './ui/card';
+
+const LocationsSection = () => {
+  return (
+    <section id="locations" className="bg-waterboy-50/50">
+      <div className="container-custom">
+        <div className="flex flex-col items-center text-center mb-12">
+          <h2 className="section-heading">Our Locations</h2>
+          <p className="section-subheading">
+            WaterBoy is proud to serve multiple areas across South Africa
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-12">
+          <div>
+            <h3 className="text-2xl font-bold text-waterboy-700 mb-6">Where We Operate</h3>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow-sm">
+                <h4 className="text-xl font-bold text-waterboy-600 mb-3">Head Office</h4>
+                <p className="text-gray-700 text-lg font-medium">Potchefstroom</p>
+                <p className="text-gray-600 mt-1">Main operations hub</p>
+              </div>
+              
+              <Card className="bg-white shadow-sm">
+                <CardContent className="p-6">
+                  <h4 className="text-xl font-bold text-waterboy-600 mb-3">Branches</h4>
+                  <ul className="space-y-2">
+                    <li className="text-gray-700">Bloemfontein</li>
+                    <li className="text-gray-700">Kimberley</li>
+                    <li className="text-gray-700">Krugersdorp</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white shadow-sm">
+                <CardContent className="p-6">
+                  <h4 className="text-xl font-bold text-waterboy-600 mb-3">Available Locations</h4>
+                  <ul className="space-y-2">
+                    <li className="text-gray-700">Margate</li>
+                    <li className="text-gray-700">Fochville</li>
+                    <li className="text-gray-700">Carletonville</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+          
+          <div>
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
+              <div className="aspect-[16/9]">
+                <iframe
+                  title="WaterBoy Potchefstroom Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114412.14361361432!2d27.019325536759394!3d-26.719691733233894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e94a0f5dbeff497%3A0x482e9759595279b9!2sPotchefstroom%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1715038215979!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-waterboy-700 mb-2">Expanding Our Reach</h3>
+                <p className="text-gray-600">
+                  WaterBoy is continuously growing and expanding to new locations across South Africa. 
+                  If you don't see your area listed, please contact us to check if we can service your location.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default LocationsSection;
