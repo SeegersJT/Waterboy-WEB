@@ -4,7 +4,7 @@ import { Droplets } from 'lucide-react';
 
 const EducationSection = () => {
   return (
-    <section id="education" className="bg-white">
+    <section id="waterboy" className="bg-white">
       <div className="container-custom">
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="section-heading">Why Choose WaterBoy?</h2>
@@ -50,12 +50,11 @@ const EducationSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center justify-center h-full text-center">
+              <CardContent className="p-1 flex flex-col items-center justify-center h-full text-center">
                 <div className="bg-waterboy-100 p-3 rounded-full mb-4">
                   <Droplets className="h-8 w-8 text-waterboy-600" />
                 </div>
                 <h3 className="text-waterboy-700 font-bold text-lg mb-2">Pure Quality</h3>
-                <p className="text-gray-600">Premium water that's purified through a rigorous process</p>
               </CardContent>
             </Card>
             
@@ -67,8 +66,7 @@ const EducationSection = () => {
                     <polyline points="12 6 12 12 16 14"/>
                   </svg>
                 </div>
-                <h3 className="text-waterboy-700 font-bold text-lg mb-2">Consistent Service</h3>
-                <p className="text-gray-600">Always on-time, weekly deliveries you can count on</p>
+                <h3 className="text-waterboy-700 font-bold text-lg mb-2">Better Health</h3>
               </CardContent>
             </Card>
             
@@ -83,7 +81,6 @@ const EducationSection = () => {
                   </svg>
                 </div>
                 <h3 className="text-waterboy-700 font-bold text-lg mb-2">Friendly Staff</h3>
-                <p className="text-gray-600">Our delivery team is courteous, professional and reliable</p>
               </CardContent>
             </Card>
             
@@ -94,8 +91,29 @@ const EducationSection = () => {
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                   </svg>
                 </div>
-                <h3 className="text-waterboy-700 font-bold text-lg mb-2">Better Health</h3>
-                <p className="text-gray-600">Staying hydrated is essential for overall wellbeing</p>
+                <h3 className="text-waterboy-700 font-bold text-lg mb-2">Voted Best Water Company In Town</h3>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
+              <CardContent className="p-6 flex flex-col items-center justify-center h-full text-center">
+                <div className="bg-waterboy-100 p-3 rounded-full mb-4">
+                  <svg className="h-8 w-8 text-waterboy-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <h3 className="text-waterboy-700 font-bold text-lg mb-2">Consistent Service</h3>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
+              <CardContent className="p-6 flex flex-col items-center justify-center h-full text-center">
+                <div className="bg-waterboy-100 p-3 rounded-full mb-4">
+                  <svg className="h-8 w-8 text-waterboy-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <h3 className="text-waterboy-700 font-bold text-lg mb-2">Trusted Brand</h3>
               </CardContent>
             </Card>
 

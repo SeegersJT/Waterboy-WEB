@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Check, Home, Building2, MonitorSmartphone, Baby } from 'lucide-react';
+import { Check, Home, Database, Recycle, Droplet } from 'lucide-react';
 
 const ServiceCard = ({ 
   title, 
@@ -49,13 +50,13 @@ const ServicesSection = () => {
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="section-heading">Our Services</h2>
           <p className="section-subheading">
-            We offer multiple delivery options to suit your home and business needs
+            We offer multiple delivery options and other services to suit your home and business needs
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <ServiceCard
-            title="Home Delivery"
+            title="Container Rental & Delivery"
             description="We deliver purified water to your doorstep on a weekly basis."
             icon={Home}
             iconColor="text-waterboy-500"
@@ -68,28 +69,8 @@ const ServicesSection = () => {
             pricing={
               <div>
                 <p className="font-medium text-gray-700">Starting from</p>
-                <p className="text-2xl font-bold text-waterboy-700">R180<span className="text-sm text-gray-500 font-normal"> /month</span></p>
+                <p className="text-2xl font-bold text-waterboy-700">R200<span className="text-sm text-gray-500 font-normal"> /month</span></p>
                 <p className="text-xs text-gray-500">1 container weekly</p>
-              </div>
-            }
-          />
-
-          <ServiceCard
-            title="Office Delivery"
-            description="We deliver cooler bottles to your workplace on a weekly basis."
-            icon={Building2}
-            iconColor="text-waterboy-600"
-            features={[
-              "Scheduled office deliveries",
-              "Larger containers for staff needs",
-              "Clean container rotation",
-              "Reliable weekly service"
-            ]}
-            pricing={
-              <div>
-                <p className="font-medium text-gray-700">Multiple bottle options</p>
-                <p className="text-2xl font-bold text-waterboy-700">R280<span className="text-sm text-gray-500 font-normal"> /month</span></p>
-                <p className="text-xs text-gray-500">2 containers weekly</p>
               </div>
             }
           />
@@ -97,39 +78,58 @@ const ServicesSection = () => {
           <ServiceCard
             title="Water Cooler Rental"
             description="Rent a water cooler with warm and cold water options."
-            icon={MonitorSmartphone}
-            iconColor="text-waterboy-700"
+            icon={Database}
+            iconColor="text-waterboy-600"
             features={[
-              "Both hot and cold water options",
+              "Both got and cold water options",
               "Weekly water delivery included",
               "Professional installation",
               "Maintenance included"
             ]}
             pricing={
               <div>
+                <p className="font-medium text-gray-700">Multiple bottle options</p>
+                <p className="text-2xl font-bold text-waterboy-700">R300<span className="text-sm text-gray-500 font-normal"> /month</span></p>
+                <p className="text-xs text-gray-500">2 containers weekly</p>
+              </div>
+            }
+          />
+
+          <ServiceCard
+            title="Refills & Coupons"
+            description="We offer refill and coupon services at the Waterboy operations hub."
+            icon={Recycle}
+            iconColor="text-waterboy-700"
+            features={[
+              "Bring your own containers",
+              "Available at 22 Scheepers Ave",
+              "Coupons include 20 refills",
+              "Refill up to 25L withh 1 punch"
+            ]}
+            pricing={
+              <div>
                 <p className="font-medium text-gray-700">Rental + 1 container</p>
-                <p className="text-2xl font-bold text-waterboy-700">R380<span className="text-sm text-gray-500 font-normal"> /month</span></p>
+                <p className="text-2xl font-bold text-waterboy-700">R400<span className="text-sm text-gray-500 font-normal"> /month</span></p>
                 <p className="text-xs text-gray-500">Additional containers available</p>
               </div>
             }
           />
 
           <ServiceCard
-            title="Baby Water Delivery"
-            description="Specially purified water for baby formula and drinking."
-            icon={Baby}
+            title="Water bottles"
+            description="Get you pure and fresh water bottles available for your business or event."
+            icon={Droplet}
             iconColor="text-waterboy-400"
             features={[
-              "Ready to use for baby formula",
-              "Extra purification process",
-              "Convenient sizes for baby needs",
-              "Regular delivery schedule"
+              "500ml bottles",
+              "1 Liter bottles",
+              "5 Litter bottles",
+              "Custom labelling available"
             ]}
             pricing={
               <div>
                 <p className="font-medium text-gray-700">Call for custom pricing</p>
                 <p className="text-xl font-bold text-waterboy-700">+27 78 906 9543</p>
-                <p className="text-xs text-gray-500">Tailored to your baby's needs</p>
               </div>
             }
           />
@@ -144,19 +144,19 @@ const ServicesSection = () => {
               <ul className="space-y-4">
                 <li className="flex justify-between items-center pb-2 border-b border-gray-100">
                   <span className="text-gray-700">1x container weekly</span>
-                  <span className="font-medium">R180 per month</span>
+                  <span className="font-medium">R200 per month</span>
                 </li>
                 <li className="flex justify-between items-center pb-2 border-b border-gray-100">
                   <span className="text-gray-700">2x containers weekly</span>
-                  <span className="font-medium">R280 per month</span>
+                  <span className="font-medium">R300 per month</span>
                 </li>
                 <li className="flex justify-between items-center pb-2 border-b border-gray-100">
                   <span className="text-gray-700">3x containers weekly</span>
-                  <span className="font-medium">R380 per month</span>
+                  <span className="font-medium">R400 per month</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span className="text-gray-700">4x containers weekly</span>
-                  <span className="font-medium">R480 per month</span>
+                  <span className="font-medium">500 per month</span>
                 </li>
               </ul>
             </div>
@@ -166,19 +166,19 @@ const ServicesSection = () => {
               <ul className="space-y-4">
                 <li className="flex justify-between items-center pb-2 border-b border-gray-100">
                   <span className="text-gray-700">Cooler + 1x container weekly</span>
-                  <span className="font-medium">R380 per month</span>
+                  <span className="font-medium">R400 per month</span>
                 </li>
                 <li className="flex justify-between items-center pb-2 border-b border-gray-100">
                   <span className="text-gray-700">Cooler + 2x containers weekly</span>
-                  <span className="font-medium">R480 per month</span>
+                  <span className="font-medium">R500 per month</span>
                 </li>
                 <li className="flex justify-between items-center pb-2 border-b border-gray-100">
                   <span className="text-gray-700">Cooler + 3x containers weekly</span>
-                  <span className="font-medium">R580 per month</span>
+                  <span className="font-medium">R600 per month</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span className="text-gray-700">Cooler + 4x containers weekly</span>
-                  <span className="font-medium">R680 per month</span>
+                  <span className="font-medium">R700 per month</span>
                 </li>
               </ul>
             </div>

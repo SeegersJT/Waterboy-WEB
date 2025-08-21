@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-waterboy-900/95 to-waterboy-800/95 -z-10"></div>
       
       {/* Inline CSS for a temporary blue water background pattern */}
-      <div className="absolute inset-0 bg-[url('/waterboy-background.jpg')] bg-cover bg-center opacity-40 -z-5"></div>
+      <div className="absolute inset-0 bg-[url('/waterboy-background.jpg')] bg-cover bg-center opacity-70 -z-5"></div>
       
       <div className="container-custom relative z-10">
         <div className="max-w-3xl">
@@ -20,9 +20,9 @@ const HeroSection = () => {
             No more heavy containers to carry!
           </p>
           <div className="flex flex-col md:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <Button className="bg-white text-waterboy-700 hover:bg-waterboy-50 text-lg px-6 py-6">
-              <a href="#contact">Order Now</a>
-            </Button>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 animate-fade-in">
+            078 906 9543
+          </h1>
           </div>
         </div>
       </div>

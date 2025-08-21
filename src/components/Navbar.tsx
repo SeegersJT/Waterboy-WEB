@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
-import { Menu, X, ShoppingCart, MessageCircle  } from 'lucide-react';
+import { Menu, X, MapPin, MessageCircle, SmilePlus } from 'lucide-react';
 import OrderModal from './OrderModal';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +25,7 @@ const Navbar = () => {
       }
       
       // Determine active section
-      const sections = ['home', 'about', 'services', 'education', 'locations', 'opportunities', 'contact'];
+      const sections = ['how it works', 'about', 'services', 'waterboy', 'locations', 'opportunities', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -86,7 +87,7 @@ const Navbar = () => {
           </a>
 
           <nav className="hidden md:flex items-center space-x-1">
-            {['home', 'about', 'services', 'education', 'locations', 'opportunities', 'contact'].map((section) => (
+            {['how it works', 'services', 'waterboy', 'locations', 'opportunities', 'contact'].map((section) => (
               <a
                 key={section}
                 onClick={(e) => {
@@ -120,13 +121,29 @@ const Navbar = () => {
             </Button>
             
             <Button 
+            asChild
+              variant="default" 
+              size="sm"
+              className="bg-waterboy-700 hover:bg-waterboy-800 flex items-center"
+            >
+              <a 
+                href="https://maps.app.goo.gl/484KdL5A5BctxsVx7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <MapPin className="mr-1" size={16} />
+                Find Us
+              </a>
+            </Button>
+
+            <Button 
               onClick={openOrderModal}
               variant="default" 
               size="sm"
               className="bg-waterboy-700 hover:bg-waterboy-800 flex items-center"
             >
-              <ShoppingCart className="mr-1" size={16} />
-              Order Now
+              <SmilePlus className="mr-1" size={16} />
+              <Link to="/coming-soon">Join Now</Link>
             </Button>
           </div>
 
@@ -139,7 +156,7 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="fixed inset-0 z-40 bg-white pt-16">
             <div className="container-custom flex flex-col space-y-4 py-8">
-              {['home', 'about', 'services', 'education', 'locations', 'opportunities', 'contact'].map((section) => (
+              {['how it works', 'services', 'waterboy', 'locations', 'opportunities', 'contact'].map((section) => (
                 <a 
                   key={section}
                   onClick={(e) => {
@@ -173,7 +190,20 @@ const Navbar = () => {
                   size="lg" 
                   className="w-full bg-waterboy-700 hover:bg-waterboy-800 flex items-center justify-center"
                 >
-                  <ShoppingCart className="mr-2" size={18} />
+                  <MapPin className="mr-2" size={18} />
+                  Find Us
+                </Button>
+
+                <Button 
+                  onClick={() => {
+                    openOrderModal();
+                    toggleMenu();
+                  }}
+                  variant="default" 
+                  size="lg" 
+                  className="w-full bg-waterboy-700 hover:bg-waterboy-800 flex items-center justify-center"
+                >
+                  <SmilePlus className="mr-2" size={18} />
                   Order Now
                 </Button>
               </div>

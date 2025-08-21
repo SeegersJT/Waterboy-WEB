@@ -1,5 +1,5 @@
-
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { 
   Card, 
   CardContent,
@@ -13,6 +13,10 @@ import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
 import { useToast } from '../hooks/use-toast';
 import { Facebook, Mail, Send } from 'lucide-react';
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -33,22 +37,25 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you shortly.",
-      });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        subject: 'General Inquiry'
-      });
-      setIsSubmitting(false);
-    }, 1000);
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+      // these keys must match your EmailJS template variable names
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+      time: new Date()
+    }, PUBLIC_KEY)
+    .then(() => {
+      toast({ title: "Message sent!", description: "We'll get back to you shortly." });
+      setFormData({ name: '', email: '', phone: '', message: '', subject: 'General Inquiry' });
+    })
+    .catch((err) => {
+      console.error(err);
+      toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
+    })
+    .finally(() => setIsSubmitting(false));
   };
 
   return (
@@ -79,7 +86,7 @@ const ContactSection = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
                   <Input
@@ -92,7 +99,7 @@ const ContactSection = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone Number</Label>
                   <Input
@@ -104,7 +111,7 @@ const ContactSection = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="subject">Subject</Label>
                   <select
@@ -115,13 +122,13 @@ const ContactSection = () => {
                     className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                   >
                     <option value="General Inquiry">General Inquiry</option>
-                    <option value="Home Delivery">Home Delivery</option>
-                    <option value="Office Delivery">Office Delivery</option>
-                    <option value="Water Cooler Rental">Water Cooler Rental</option>
-                    <option value="Business Opportunity">Business Opportunity</option>
+                    <option value="Home Delivery">Container Rental & Delivery</option>
+                    <option value="Office Delivery">Water Cooler Rental</option>
+                    <option value="Water Cooler Rental">Refills & Coupons</option>
+                    <option value="Business Opportunity">Water bottles</option>
                   </select>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="message">Your Message</Label>
                   <Textarea
@@ -136,14 +143,19 @@ const ContactSection = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button type="submit" className="w-full bg-waterboy-500 hover:bg-waterboy-600" disabled={isSubmitting}>
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                <Button
+                  type="submit"
+                  className="w-full bg-waterboy-500 hover:bg-waterboy-600"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Preparing…' : 'Send Message'}
                   <Send className="ml-2 h-4 w-4" />
                 </Button>
               </CardFooter>
             </form>
           </Card>
 
+          {/* Right column unchanged */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-waterboy-700 mb-4">Get In Touch</h3>
@@ -151,7 +163,7 @@ const ContactSection = () => {
                 Have questions about our services or want to schedule a delivery? Contact us using any of the 
                 methods below and our friendly team will be happy to assist you.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="bg-waterboy-100 p-3 rounded-full mr-4">
@@ -166,19 +178,19 @@ const ContactSection = () => {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center">
                   <div className="bg-waterboy-100 p-3 rounded-full mr-4">
                     <Mail className="h-6 w-6 text-waterboy-600" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Email Address</p>
-                    <a href="mailto:info@waterboy.co.za" className="text-lg font-medium text-waterboy-700 hover:underline">
-                      info@waterboy.co.za
+                    <a href="mailto:water8boy@gmail.com" className="text-lg font-medium text-waterboy-700 hover:underline">
+                      water8boy@gmail.com
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center">
                   <div className="bg-waterboy-100 p-3 rounded-full mr-4">
                     <svg className="h-6 w-6 text-waterboy-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -189,7 +201,7 @@ const ContactSection = () => {
                   <div>
                     <p className="text-sm text-gray-500">Head Office</p>
                     <p className="text-lg font-medium text-waterboy-700">
-                      Potchefstroom, South Africa
+                      22 Scheepers Ave, Potchefstroom, South Africa
                     </p>
                   </div>
                 </div>
@@ -229,7 +241,7 @@ const ContactSection = () => {
                 </a>
                 <a
                   href="https://wa.me/27789069543"
-                  target="_blank" 
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-waterboy-100 p-4 rounded-full hover:bg-waterboy-200 transition-colors"
                 >

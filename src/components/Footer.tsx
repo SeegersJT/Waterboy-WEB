@@ -44,37 +44,22 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#services" className="text-waterboy-100 hover:text-white transition-colors">Home Delivery</a></li>
-              <li><a href="#services" className="text-waterboy-100 hover:text-white transition-colors">Office Delivery</a></li>
+              <li><a href="#services" className="text-waterboy-100 hover:text-white transition-colors">Container Rental & Delivery</a></li>
               <li><a href="#services" className="text-waterboy-100 hover:text-white transition-colors">Water Cooler Rental</a></li>
-              <li><a href="#services" className="text-waterboy-100 hover:text-white transition-colors">Baby Water Delivery</a></li>
+              <li><a href="#services" className="text-waterboy-100 hover:text-white transition-colors">Refills & Coupons</a></li>
+              <li><a href="#services" className="text-waterboy-100 hover:text-white transition-colors">Water Bottles</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#about" className="text-waterboy-100 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#education" className="text-waterboy-100 hover:text-white transition-colors">Why Choose Us</a></li>
-              <li><a href="#locations" className="text-waterboy-100 hover:text-white transition-colors">Locations</a></li>
+              <li><a href="#waterboy" className="text-waterboy-100 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#how it works" className="text-waterboy-100 hover:text-white transition-colors">Why WaterBoy</a></li>
+              <li><a href="#locations" className="text-waterboy-100 hover:text-white transition-colors">Our Locations</a></li>
               <li><a href="#opportunities" className="text-waterboy-100 hover:text-white transition-colors">Business Opportunities</a></li>
               <li><a href="#contact" className="text-waterboy-100 hover:text-white transition-colors">Contact Us</a></li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-bold mb-4">Newsletter</h3>
-            <p className="text-waterboy-100 mb-4">Subscribe to our newsletter for the latest updates and offers.</p>
-            <div className="flex">
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="bg-waterboy-700 text-white px-4 py-2 rounded-l-md flex-grow focus:outline-none focus:ring-2 focus:ring-waterboy-400"
-              />
-              <button className="bg-waterboy-500 hover:bg-waterboy-400 transition-colors p-2 rounded-r-md">
-                <Send className="h-5 w-5" />
-              </button>
-            </div>
           </div>
         </div>
         
@@ -84,8 +69,7 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} WaterBoy. All rights reserved.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-waterboy-100 hover:text-white text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-waterboy-100 hover:text-white text-sm transition-colors">Terms of Service</a>
+              <a href="http://h2go.org.za/" className="text-waterboy-100 hover:text-white text-sm transition-colors">Powered by H2GO</a>
             </div>
           </div>
         </div>

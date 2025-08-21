@@ -14,12 +14,11 @@ const LocationsSection = () => {
 
         <div className="grid grid-cols-1 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-waterboy-700 mb-6">Where We Operate</h3>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-sm">
                 <h4 className="text-xl font-bold text-waterboy-600 mb-3">Head Office</h4>
                 <p className="text-gray-700 text-lg font-medium">Potchefstroom</p>
+                <p className="text-gray-600 mt-1">+27 78 906 9543</p>
                 <p className="text-gray-600 mt-1">Main operations hub</p>
               </div>
               
@@ -27,21 +26,18 @@ const LocationsSection = () => {
                 <CardContent className="p-6">
                   <h4 className="text-xl font-bold text-waterboy-600 mb-3">Branches</h4>
                   <ul className="space-y-2">
-                    <li className="text-gray-700">Bloemfontein</li>
-                    <li className="text-gray-700">Kimberley</li>
-                    <li className="text-gray-700">Krugersdorp</li>
+                    <li className="text-gray-700"><pre>Bloemfontein  - +27 72 408 6701</pre></li>
+                    <li className="text-gray-700"><pre>Kimberley     - +27 64 648 9082</pre></li>
+                    <li className="text-gray-700"><pre>Krugersdorp   - +27 73 486 1302</pre></li>
                   </ul>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white shadow-sm">
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-bold text-waterboy-600 mb-3">Available Locations</h4>
-                  <ul className="space-y-2">
-                    <li className="text-gray-700">Margate</li>
-                    <li className="text-gray-700">Fochville</li>
-                    <li className="text-gray-700">Carletonville</li>
-                  </ul>
+              <Card className="bg-white shadow-sm h-40">
+                <CardContent className="p-6 flex items-center justify-center h-full">
+                  <h4 className="text-xl font-bold text-waterboy-600 text-center">
+                    PRIME LOCATIONS FOR NEW WATERBOY OPPORTUNITIES AVAILABLE
+                  </h4>
                 </CardContent>
               </Card>
             </div>
