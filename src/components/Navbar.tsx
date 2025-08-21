@@ -5,6 +5,8 @@ import { Menu, X, MapPin, MessageCircle, SmilePlus } from 'lucide-react';
 import OrderModal from './OrderModal';
 import { Link } from 'react-router-dom';
 
+import WaterboyLogo from "@/assets/waterboy-logo.png"
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,10 +82,11 @@ const Navbar = () => {
             href="#home" 
             className="flex items-center cursor-pointer"
           >
-            <div className="text-2xl md:text-3xl font-display font-bold text-waterboy-700 flex items-center">
-              <span>Water</span>
-              <span className="text-waterboy-500">Boy</span>
-            </div>
+            <img
+              src={WaterboyLogo}
+              alt="WaterBoy Logo"
+              className="h-20 w-auto" // adjust size as needed
+            />
           </a>
 
           <nav className="hidden md:flex items-center space-x-1">

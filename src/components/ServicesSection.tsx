@@ -156,7 +156,7 @@ const ServicesSection = () => {
                 </li>
                 <li className="flex justify-between items-center">
                   <span className="text-gray-700">4x containers weekly</span>
-                  <span className="font-medium">500 per month</span>
+                  <span className="font-medium">R500 per month</span>
                 </li>
               </ul>
             </div>

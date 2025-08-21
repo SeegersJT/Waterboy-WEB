@@ -1,6 +1,8 @@
 
 import { Card, CardContent } from './ui/card';
 
+import DeliveryMan from "@/assets/delivery-man.jpg"
+
 const AboutSection = () => {
   return (
     <section id="how it works" className="bg-white">
@@ -16,7 +18,7 @@ const AboutSection = () => {
           <div>
             <div className="relative aspect-square overflow-hidden rounded-2xl">
               <img 
-                src="/waterboy-delivery.jpg" 
+                src={DeliveryMan}
                 alt="WaterBoy delivery truck" 
                 className="object-cover w-full h-full"
               />
