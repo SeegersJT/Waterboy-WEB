@@ -136,13 +136,16 @@ const Navbar = () => {
               </a>
             </Button>
 
-            <Button 
+            <Button
+              asChild
               variant="default" 
               size="sm"
               className="bg-waterboy-700 hover:bg-waterboy-800 flex items-center"
             >
-              <SmilePlus className="mr-1" size={16} />
-              <Link to="/coming-soon">Join Now</Link>
+              <Link to="/coming-soon">
+                <SmilePlus className="mr-1" size={16} />
+                Join Now
+              </Link>
             </Button>
           </div>
 
@@ -196,17 +199,21 @@ const Navbar = () => {
                   </a>
                 </Button>
 
-                <Button 
-                  onClick={() => {
-                    toggleMenu();
-                  }}
-                  variant="default" 
-                  size="lg" 
-                  className="w-full bg-waterboy-700 hover:bg-waterboy-800 flex items-center justify-center"
-                >
-                  <SmilePlus className="mr-2" size={18} />
-                  <Link to="/coming-soon">Join Now</Link>
-                </Button>
+                
+                  <Button 
+                    asChild 
+                    onClick={() => {
+                      toggleMenu();
+                    }}
+                    variant="default" 
+                    size="lg" 
+                    className="w-full bg-waterboy-700 hover:bg-waterboy-800 flex items-center justify-center"
+                  >
+                    <Link to="/coming-soon">
+                      <SmilePlus className="mr-1" size={16} />
+                      Join Now
+                    </Link>
+                  </Button>
               </div>
             </div>
           </div>
