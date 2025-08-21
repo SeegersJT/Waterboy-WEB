@@ -121,7 +121,7 @@ const Navbar = () => {
             </Button>
             
             <Button 
-            asChild
+              asChild
               variant="default" 
               size="sm"
               className="bg-waterboy-700 hover:bg-waterboy-800 flex items-center"
@@ -137,7 +137,6 @@ const Navbar = () => {
             </Button>
 
             <Button 
-              onClick={openOrderModal}
               variant="default" 
               size="sm"
               className="bg-waterboy-700 hover:bg-waterboy-800 flex items-center"
@@ -181,22 +180,24 @@ const Navbar = () => {
                   <MessageCircle size={18} />
                   WhatsApp
                 </Button>
-                <Button 
-                  onClick={() => {
-                    openOrderModal();
-                    toggleMenu();
-                  }}
+                <Button
+                  asChild
                   variant="default" 
                   size="lg" 
                   className="w-full bg-waterboy-700 hover:bg-waterboy-800 flex items-center justify-center"
                 >
-                  <MapPin className="mr-2" size={18} />
-                  Find Us
+                   <a 
+                    href="https://maps.app.goo.gl/484KdL5A5BctxsVx7" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <MapPin className="mr-1" size={16} />
+                    Find Us
+                  </a>
                 </Button>
 
                 <Button 
                   onClick={() => {
-                    openOrderModal();
                     toggleMenu();
                   }}
                   variant="default" 
@@ -204,7 +205,7 @@ const Navbar = () => {
                   className="w-full bg-waterboy-700 hover:bg-waterboy-800 flex items-center justify-center"
                 >
                   <SmilePlus className="mr-2" size={18} />
-                  Order Now
+                  <Link to="/coming-soon">Join Now</Link>
                 </Button>
               </div>
             </div>
