@@ -14,7 +14,8 @@ const EducationSection = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-12">
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-6 auto-rows-fr">
+          {/* Feature cards arranged responsively: 2 columns on mobile and tablets, 3 on desktop */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-fr">
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
               <CardContent className="p-4 md:p-6 flex flex-col items-center justify-center h-full text-center">
                 <div className="bg-waterboy-100 p-3 rounded-full mb-4">
@@ -140,7 +141,7 @@ const EducationSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="col-span-3 border-none bg-gradient-to-br from-waterboy-600 to-waterboy-800 text-white">
+            <Card className="col-span-2 lg:col-span-3 border-none bg-gradient-to-br from-waterboy-600 to-waterboy-800 text-white">
               <CardContent className="p-8 flex flex-col items-center text-center">
                 <h3 className="text-2xl font-bold mb-4">
                   Don't Wait... Call Now!

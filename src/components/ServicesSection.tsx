@@ -1,5 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { Check, Database, Droplet, Home, Recycle } from "lucide-react";
+import {
+  Check,
+  Database,
+  Droplet,
+  Home,
+  LucideIcon,
+  Minus,
+  Plus,
+  Recycle,
+} from "lucide-react";
+import { useState } from "react";
+import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const ServiceCard = ({
@@ -11,7 +21,7 @@ const ServiceCard = ({
 }: {
   title: string;
   description: string;
-  icon: any;
+  icon: LucideIcon;
   iconColor?: string;
   features: string[];
 }) => (
@@ -39,6 +49,14 @@ const ServiceCard = ({
 );
 
 const ServicesSection = () => {
+  const [containerCount, setContainerCount] = useState(1);
+  const [includeCooler, setIncludeCooler] = useState(false);
+
+  const COOLER_RENTAL_PRICE = 200;
+  const containerPrice = 200 + (containerCount - 1) * 100;
+  const coolerPrice = includeCooler ? COOLER_RENTAL_PRICE : 0;
+  const totalPrice = containerPrice + coolerPrice;
+
   return (
     <section id="services" className="bg-waterboy-50/50">
       <div className="container-custom">
@@ -108,61 +126,61 @@ const ServicesSection = () => {
             Pricing Structure
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8">
-            <div>
-              <h4 className="font-bold text-waterboy-600 text-lg mb-4">
-                Standard Water Delivery
-              </h4>
-              <ul className="space-y-4">
-                <li className="flex justify-between items-center pb-2 border-b border-gray-100">
-                  <span className="text-gray-700">1x container weekly</span>
-                  <span className="font-medium">R200 per month</span>
-                </li>
-                <li className="flex justify-between items-center pb-2 border-b border-gray-100">
-                  <span className="text-gray-700">2x containers weekly</span>
-                  <span className="font-medium">R300 per month</span>
-                </li>
-                <li className="flex justify-between items-center pb-2 border-b border-gray-100">
-                  <span className="text-gray-700">3x containers weekly</span>
-                  <span className="font-medium">R400 per month</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <span className="text-gray-700">4x containers weekly</span>
-                  <span className="font-medium">R500 per month</span>
-                </li>
-              </ul>
+          <div className="max-w-md mx-auto flex flex-col items-center space-y-6">
+            <h4 className="font-bold text-waterboy-600 text-lg text-center">
+              {includeCooler
+                ? "Water Cooler Rental + Delivery"
+                : "Standard Water Delivery"}
+            </h4>
+
+            <div className="flex items-center space-x-4">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() =>
+                  setContainerCount((prev) => Math.max(1, prev - 1))
+                }
+                aria-label="Decrease containers"
+              >
+                <Minus className="h-4 w-4" />
+              </Button>
+              <span className="text-lg font-medium">
+                {containerCount} container{containerCount > 1 ? "s" : ""} weekly
+              </span>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() =>
+                  setContainerCount((prev) => Math.min(4, prev + 1))
+                }
+                aria-label="Increase containers"
+              >
+                <Plus className="h-4 w-4" />
+              </Button>
             </div>
 
-            <div>
-              <h4 className="font-bold text-waterboy-600 text-lg mb-4">
-                Water Cooler Rental + Delivery
-              </h4>
-              <ul className="space-y-4">
-                <li className="flex justify-between items-center pb-2 border-b border-gray-100">
-                  <span className="text-gray-700">
-                    Cooler + 1x container weekly
-                  </span>
-                  <span className="font-medium">R400 per month</span>
-                </li>
-                <li className="flex justify-between items-center pb-2 border-b border-gray-100">
-                  <span className="text-gray-700">
-                    Cooler + 2x containers weekly
-                  </span>
-                  <span className="font-medium">R500 per month</span>
-                </li>
-                <li className="flex justify-between items-center pb-2 border-b border-gray-100">
-                  <span className="text-gray-700">
-                    Cooler + 3x containers weekly
-                  </span>
-                  <span className="font-medium">R600 per month</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <span className="text-gray-700">
-                    Cooler + 4x containers weekly
-                  </span>
-                  <span className="font-medium">R700 per month</span>
-                </li>
-              </ul>
+            <label className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                checked={includeCooler}
+                onChange={(e) => setIncludeCooler(e.target.checked)}
+                className="h-4 w-4 accent-waterboy-500"
+              />
+              <span className="text-gray-700">
+                {`Include water cooler (+R${COOLER_RENTAL_PRICE}/mo)`}
+              </span>
+            </label>
+
+            <div className="space-y-1 text-center">
+              <div className="text-gray-700">
+                Containers: R{containerPrice} / mo
+              </div>
+              {includeCooler && (
+                <div className="text-gray-700">Cooler: R{coolerPrice} / mo</div>
+              )}
+              <div className="text-xl font-bold text-waterboy-700">
+                Total: R{totalPrice} per month
+              </div>
             </div>
           </div>
         </div>
