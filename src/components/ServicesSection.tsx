@@ -54,7 +54,7 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           <ServiceCard
             title="Container Rental & Delivery"
             description="We deliver purified water to your doorstep on a weekly basis."
@@ -137,8 +137,8 @@ const ServicesSection = () => {
 
         <div className="mt-16 bg-white rounded-xl p-8 shadow-sm">
           <h3 className="text-2xl font-bold text-waterboy-700 mb-6">Pricing Structure</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8">
             <div>
               <h4 className="font-bold text-waterboy-600 text-lg mb-4">Standard Water Delivery</h4>
               <ul className="space-y-4">
