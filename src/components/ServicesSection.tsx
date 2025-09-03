@@ -12,27 +12,41 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
+import bottles from "@/assets/bottles.png";
+import containers from "@/assets/containers.jpg";
+import coolers from "@/assets/coolers.png";
+import refills from "@/assets/refills.jpg";
+
 const ServiceCard = ({
   title,
   description,
   icon: Icon,
   iconColor = "text-waterboy-500",
   features,
+  watermark,
 }: {
   title: string;
   description: string;
   icon: LucideIcon;
   iconColor?: string;
   features: string[];
+  watermark?: string;
 }) => (
-  <Card className="border-waterboy-100 hover:shadow-lg transition-shadow h-full flex flex-col">
-    <CardHeader className="pb-4">
+  <Card className="border-waterboy-100 hover:shadow-lg transition-shadow h-full flex flex-col relative overflow-hidden">
+    {watermark && (
+      <img
+        src={watermark}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none"
+      />
+    )}
+    <CardHeader className="pb-4 relative z-10">
       <div className={`${iconColor} mb-4 flex items-center`}>
         <Icon size={24} className="mr-2" />
         <CardTitle className="text-xl">{title}</CardTitle>
       </div>
     </CardHeader>
-    <CardContent className="flex-grow flex flex-col">
+    <CardContent className="flex-grow flex flex-col relative z-10">
       <p className="text-gray-600 mb-6">{description}</p>
       <div className="mb-6 flex-grow">
         <ul className="space-y-2">
@@ -74,6 +88,7 @@ const ServicesSection = () => {
             description="We deliver purified water to your doorstep on a weekly basis."
             icon={Home}
             iconColor="text-waterboy-500"
+            watermark={bottles}
             features={[
               "Weekly delivery on a specific day",
               "Clean containers provided by us",
@@ -87,6 +102,7 @@ const ServicesSection = () => {
             description="Rent a water cooler with warm and cold water options."
             icon={Database}
             iconColor="text-waterboy-600"
+            watermark={containers}
             features={[
               "Both hot and cold water options",
               "Weekly water delivery included",
@@ -100,6 +116,7 @@ const ServicesSection = () => {
             description="We offer refill and coupon services at the Waterboy operations hub."
             icon={Recycle}
             iconColor="text-waterboy-700"
+            watermark={coolers}
             features={[
               "Bring your own containers",
               "Available at 22 Scheepers Ave",
@@ -112,6 +129,7 @@ const ServicesSection = () => {
             description="Get you pure and fresh water bottles available for your business or event."
             icon={Droplet}
             iconColor="text-waterboy-400"
+            watermark={refills}
             features={[
               "500ml bottles",
               "1 Liter bottles",
