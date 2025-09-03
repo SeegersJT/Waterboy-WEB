@@ -1,7 +1,6 @@
+import { Card, CardContent } from "./ui/card";
 
-import { Card, CardContent } from './ui/card';
-
-import DeliveryMan from "@/assets/delivery-man.jpg"
+import DeliveryMan from "@/assets/delivery-man.jpg";
 
 const AboutSection = () => {
   return (
@@ -10,20 +9,23 @@ const AboutSection = () => {
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="section-heading">About WaterBoy</h2>
           <p className="section-subheading">
-            The story behind our mission to provide clean water to everyone in Potchefstroom
+            The story behind our mission to provide clean water to everyone in
+            Potchefstroom
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="relative aspect-square overflow-hidden rounded-2xl">
-              <img 
+              <img
                 src={DeliveryMan}
-                alt="WaterBoy delivery truck" 
+                alt="WaterBoy delivery truck"
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-waterboy-700/60 to-transparent flex items-end p-6">
-                <p className="text-white text-xl font-bold">Delivering since 2010</p>
+                <p className="text-white text-xl font-bold">
+                  Delivering since 2010
+                </p>
               </div>
             </div>
           </div>
@@ -32,7 +34,9 @@ const AboutSection = () => {
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
               <CardContent className="p-4 md:p-6 text-center">
                 <h2>STEP 1</h2>
-                <h3 className="text-waterboy-700 font-bold text-xl mb-2">Get Started</h3>
+                <h3 className="text-waterboy-700 font-bold text-xl mb-2">
+                  Get Started
+                </h3>
                 <p className="text-gray-600">Sign up or sontact us to begin</p>
               </CardContent>
             </Card>
@@ -40,15 +44,21 @@ const AboutSection = () => {
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
               <CardContent className="p-4 md:p-6 text-center">
                 <h2>STEP 2</h2>
-                <h3 className="text-waterboy-700 font-bold text-xl mb-2">Pick your day</h3>
-                <p className="text-gray-600">Choose your best weekly delivery day</p>
+                <h3 className="text-waterboy-700 font-bold text-xl mb-2">
+                  Pick your day
+                </h3>
+                <p className="text-gray-600">
+                  Choose your best weekly delivery day
+                </p>
               </CardContent>
             </Card>
 
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
               <CardContent className="p-4 md:p-6 text-center">
                 <h2>STEP 3</h2>
-                <h3 className="text-waterboy-700 font-bold text-xl mb-2">Simple payment options</h3>
+                <h3 className="text-waterboy-700 font-bold text-xl mb-2">
+                  Simple payment options
+                </h3>
                 <p className="text-gray-600">Card, EFT, Debit Order or cash</p>
               </CardContent>
             </Card>
@@ -56,12 +66,16 @@ const AboutSection = () => {
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
               <CardContent className="p-4 md:p-6 text-center">
                 <h2>STEP 4</h2>
-                <h3 className="text-waterboy-700 font-bold text-xl mb-2">You're all set</h3>
-                <p className="text-gray-600">Water delivered - it's that simple</p>
+                <h3 className="text-waterboy-700 font-bold text-xl mb-2">
+                  You're all set
+                </h3>
+                <p className="text-gray-600">
+                  Water delivered - it's that simple
+                </p>
               </CardContent>
             </Card>
           </div>
-          
+
           {/* <div className="space-y-6">
             <div className="bg-waterboy-50 p-6 rounded-xl">
               <p className="italic text-waterboy-700">
@@ -99,32 +113,44 @@ const AboutSection = () => {
         <div className="mt-16 flex flex-col items-center text-center mb-12">
           <h2 className="section-heading">What makes us unique</h2>
         </div>
-        
+
         <div className="mt-16 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
             <CardContent className="p-4 md:p-6 text-center">
-              <h3 className="text-waterboy-700 font-bold text-xl mb-2">Hassle Free</h3>
-              <p className="text-gray-600">Easy ordering and regular deliveries</p>
+              <h3 className="text-waterboy-700 font-bold text-xl mb-2">
+                Hassle Free
+              </h3>
+              <p className="text-gray-600">
+                Easy ordering and regular deliveries
+              </p>
             </CardContent>
           </Card>
 
           <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
             <CardContent className="p-4 md:p-6 text-center">
-              <h3 className="text-waterboy-700 font-bold text-xl mb-2">No Contracts</h3>
+              <h3 className="text-waterboy-700 font-bold text-xl mb-2">
+                No Contracts
+              </h3>
               <p className="text-gray-600">No long-term commitments required</p>
             </CardContent>
           </Card>
 
           <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
             <CardContent className="p-4 md:p-6 text-center">
-              <h3 className="text-waterboy-700 font-bold text-xl mb-2">No Deposits</h3>
-              <p className="text-gray-600">Start service without upfront fees</p>
+              <h3 className="text-waterboy-700 font-bold text-xl mb-2">
+                No Deposits
+              </h3>
+              <p className="text-gray-600">
+                Start service without upfront fees
+              </p>
             </CardContent>
           </Card>
 
           <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
             <CardContent className="p-4 md:p-6 text-center">
-              <h3 className="text-waterboy-700 font-bold text-xl mb-2">No Hidden Costs</h3>
+              <h3 className="text-waterboy-700 font-bold text-xl mb-2">
+                No Hidden Costs
+              </h3>
               <p className="text-gray-600">Transparent pricing and billing</p>
             </CardContent>
           </Card>
@@ -132,6 +158,6 @@ const AboutSection = () => {
       </div>
     </section>
   );
-}
+};
 
 export default AboutSection;

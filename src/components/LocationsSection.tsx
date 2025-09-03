@@ -1,5 +1,4 @@
-
-import { Card, CardContent } from './ui/card';
+import { Card, CardContent } from "./ui/card";
 
 const LocationsSection = () => {
   return (
@@ -16,23 +15,35 @@ const LocationsSection = () => {
           <div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <div className="bg-white p-6 rounded-xl shadow-sm">
-                <h4 className="text-xl font-bold text-waterboy-600 mb-3">Head Office</h4>
-                <p className="text-gray-700 text-lg font-medium">Potchefstroom</p>
+                <h4 className="text-xl font-bold text-waterboy-600 mb-3">
+                  Head Office
+                </h4>
+                <p className="text-gray-700 text-lg font-medium">
+                  Potchefstroom
+                </p>
                 <p className="text-gray-600 mt-1">+27 78 906 9543</p>
                 <p className="text-gray-600 mt-1">Main operations hub</p>
               </div>
-              
+
               <Card className="bg-white shadow-sm">
                 <CardContent className="p-6">
-                  <h4 className="text-xl font-bold text-waterboy-600 mb-3">Branches</h4>
+                  <h4 className="text-xl font-bold text-waterboy-600 mb-3">
+                    Branches
+                  </h4>
                   <ul className="space-y-2">
-                    <li className="text-gray-700"><pre>Bloemfontein  - +27 72 408 6701</pre></li>
-                    <li className="text-gray-700"><pre>Kimberley     - +27 64 648 9082</pre></li>
-                    <li className="text-gray-700"><pre>Krugersdorp   - +27 73 486 1302</pre></li>
+                    <li className="text-gray-700">
+                      <pre>Bloemfontein - +27 72 408 6701</pre>
+                    </li>
+                    <li className="text-gray-700">
+                      <pre>Kimberley - +27 64 648 9082</pre>
+                    </li>
+                    <li className="text-gray-700">
+                      <pre>Krugersdorp - +27 73 486 1302</pre>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
-              
+
               <Card className="bg-white shadow-sm h-40">
                 <CardContent className="p-6 flex items-center justify-center h-full">
                   <h4 className="text-xl font-bold text-waterboy-600 text-center">
@@ -42,7 +53,7 @@ const LocationsSection = () => {
               </Card>
             </div>
           </div>
-          
+
           <div>
             <div className="bg-white rounded-xl overflow-hidden shadow-sm">
               <div className="aspect-[16/9]">
@@ -58,10 +69,14 @@ const LocationsSection = () => {
                 ></iframe>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-waterboy-700 mb-2">Expanding Our Reach</h3>
+                <h3 className="text-xl font-bold text-waterboy-700 mb-2">
+                  Expanding Our Reach
+                </h3>
                 <p className="text-gray-600">
-                  WaterBoy is continuously growing and expanding to new locations across South Africa. 
-                  If you don't see your area listed, please contact us to check if we can service your location.
+                  WaterBoy is continuously growing and expanding to new
+                  locations across South Africa. If you don't see your area
+                  listed, please contact us to check if we can service your
+                  location.
                 </p>
               </div>
             </div>
@@ -70,6 +85,6 @@ const LocationsSection = () => {
       </div>
     </section>
   );
-}
+};
 
 export default LocationsSection;
