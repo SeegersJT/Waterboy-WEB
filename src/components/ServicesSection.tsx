@@ -8,14 +8,12 @@ const ServiceCard = ({
   icon: Icon,
   iconColor = "text-waterboy-500",
   features,
-  pricing,
 }: {
   title: string;
   description: string;
   icon: any;
   iconColor?: string;
   features: string[];
-  pricing: React.ReactNode;
 }) => (
   <Card className="border-waterboy-100 hover:shadow-lg transition-shadow h-full flex flex-col">
     <CardHeader className="pb-4">
@@ -36,7 +34,6 @@ const ServiceCard = ({
           ))}
         </ul>
       </div>
-      <div className="pt-4 border-t">{pricing}</div>
     </CardContent>
   </Card>
 );
@@ -65,19 +62,6 @@ const ServicesSection = () => {
               "Fresh water rotation each week",
               "No heavy containers to carry",
             ]}
-            pricing={
-              <div>
-                <p className="font-medium text-gray-700">Starting from</p>
-                <p className="text-2xl font-bold text-waterboy-700">
-                  R200
-                  <span className="text-sm text-gray-500 font-normal">
-                    {" "}
-                    /month
-                  </span>
-                </p>
-                <p className="text-xs text-gray-500">1 container weekly</p>
-              </div>
-            }
           />
 
           <ServiceCard
@@ -86,26 +70,11 @@ const ServicesSection = () => {
             icon={Database}
             iconColor="text-waterboy-600"
             features={[
-              "Both got and cold water options",
+              "Both hot and cold water options",
               "Weekly water delivery included",
               "Professional installation",
               "Maintenance included",
             ]}
-            pricing={
-              <div>
-                <p className="font-medium text-gray-700">
-                  Multiple bottle options
-                </p>
-                <p className="text-2xl font-bold text-waterboy-700">
-                  R300
-                  <span className="text-sm text-gray-500 font-normal">
-                    {" "}
-                    /month
-                  </span>
-                </p>
-                <p className="text-xs text-gray-500">2 containers weekly</p>
-              </div>
-            }
           />
 
           <ServiceCard
@@ -116,26 +85,8 @@ const ServicesSection = () => {
             features={[
               "Bring your own containers",
               "Available at 22 Scheepers Ave",
-              "Coupons include 20 refills",
-              "Refill up to 25L withh 1 punch",
+              "Coupons available for a reduced price",
             ]}
-            pricing={
-              <div>
-                <p className="font-medium text-gray-700">
-                  Rental + 1 container
-                </p>
-                <p className="text-2xl font-bold text-waterboy-700">
-                  R400
-                  <span className="text-sm text-gray-500 font-normal">
-                    {" "}
-                    /month
-                  </span>
-                </p>
-                <p className="text-xs text-gray-500">
-                  Additional containers available
-                </p>
-              </div>
-            }
           />
 
           <ServiceCard
@@ -149,16 +100,6 @@ const ServicesSection = () => {
               "5 Litter bottles",
               "Custom labelling available",
             ]}
-            pricing={
-              <div>
-                <p className="font-medium text-gray-700">
-                  Call for custom pricing
-                </p>
-                <p className="text-xl font-bold text-waterboy-700">
-                  +27 78 906 9543
-                </p>
-              </div>
-            }
           />
         </div>
 

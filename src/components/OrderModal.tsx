@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -20,6 +21,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { Button } from "./ui/button";
 
 interface OrderModalProps {
   isOpen: boolean;
@@ -69,10 +71,14 @@ const formSchema = customerInfoSchema
 
 type FormData = z.infer<typeof formSchema>;
 
+interface OrderSummary extends FormData {
+  price: number;
+}
+
 const OrderModal = ({ isOpen, onClose }: OrderModalProps) => {
   const { toast } = useToast();
   const [step, setStep] = useState(1);
-  const [orderSummary, setOrderSummary] = useState<FormData | null>(null);
+  const [orderSummary, setOrderSummary] = useState<OrderSummary | null>(null);
 
   // Initialize form
   const form = useForm<FormData>({

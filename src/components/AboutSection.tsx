@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <section id="how it works" className="bg-white">
       <div className="container-custom">
-        <div className="flex flex-col items-center text-center mb-12">
+        <div className="flex flex-col items-center text-center">
           <h2 className="section-heading">About WaterBoy</h2>
           <p className="section-subheading">
             The story behind our mission to provide clean water to everyone in
@@ -30,14 +30,14 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-1 md:gap-6">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-1 md:gap-6">
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
               <CardContent className="p-4 md:p-6 text-center">
                 <h2>STEP 1</h2>
                 <h3 className="text-waterboy-700 font-bold text-xl mb-2">
                   Get Started
                 </h3>
-                <p className="text-gray-600">Sign up or sontact us to begin</p>
+                <p className="text-gray-600">Sign up or contact us to begin</p>
               </CardContent>
             </Card>
 
@@ -132,6 +132,7 @@ const AboutSection = () => {
                 No Contracts
               </h3>
               <p className="text-gray-600">No long-term commitments required</p>
+              <p className="text-gray-600">Month-to-month</p>
             </CardContent>
           </Card>
 
@@ -141,7 +142,7 @@ const AboutSection = () => {
                 No Deposits
               </h3>
               <p className="text-gray-600">
-                Start service without upfront fees
+                Start service without upfront fees and container needed
               </p>
             </CardContent>
           </Card>

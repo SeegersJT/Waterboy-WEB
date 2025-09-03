@@ -13,58 +13,8 @@ const EducationSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-waterboy-700">
-              In a word, convenience.
-            </h3>
-            <p className="text-gray-700">
-              Whether it's a 5-liter bottle or a 25-liter container, or a case
-              of 500-ml bottles, carrying your own bottled water can be a major
-              workout.
-            </p>
-            <p className="text-gray-700">
-              Let our friendly WaterBoy save you the hassle by bringing the
-              great taste of WaterBoy water right to your door-step on a weekly
-              basis!
-            </p>
-            <p className="text-gray-700">
-              You can count on WaterBoy to deliver the products you love to your
-              home or office.
-            </p>
-
-            <div className="pt-4">
-              <h3 className="text-xl font-bold text-waterboy-700 mb-3">
-                Our Environmental Commitment
-              </h3>
-              <p className="text-gray-700">
-                WaterBoy prides itself in being as environmentally friendly as
-                possible:
-              </p>
-              <ul className="list-disc pl-5 mt-2 space-y-2 text-gray-700">
-                <li>Our waste water is being re-purposed</li>
-                <li>We do not sell our containers, we re-use them</li>
-                <li>
-                  Our clients don't have to worry about changing their filters
-                  or wasting water
-                </li>
-              </ul>
-            </div>
-
-            <div className="pt-4">
-              <p className="text-lg font-medium text-waterboy-700">
-                Just relax - we deliver at your home or office. The only thing
-                we can't do for our client is pour them a fresh glass of clean
-                water.
-              </p>
-              <p className="text-waterboy-600 font-bold text-xl mt-2">
-                It is that easy... Call now for your own fresh container of
-                water.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 gap-12">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-6 auto-rows-fr">
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
               <CardContent className="p-4 md:p-6 flex flex-col items-center justify-center h-full text-center">
                 <div className="bg-waterboy-100 p-3 rounded-full mb-4">
@@ -190,7 +140,7 @@ const EducationSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="col-span-2 border-none bg-gradient-to-br from-waterboy-600 to-waterboy-800 text-white">
+            <Card className="col-span-3 border-none bg-gradient-to-br from-waterboy-600 to-waterboy-800 text-white">
               <CardContent className="p-8 flex flex-col items-center text-center">
                 <h3 className="text-2xl font-bold mb-4">
                   Don't Wait... Call Now!
