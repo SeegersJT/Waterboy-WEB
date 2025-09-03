@@ -258,7 +258,7 @@ const ContactSection = () => {
                   <div>
                     <p className="text-sm text-gray-500">Head Office</p>
                     <a
-                      href="https://www.google.com/maps?q=22+Scheepers+Ave,+Potchefstroom,+South+Africa"
+                      href="https://maps.app.goo.gl/D1QqRwt6w9t5W7xB7"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-lg font-medium text-waterboy-700 hover:underline"
