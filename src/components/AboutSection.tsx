@@ -28,33 +28,33 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-6">
+          <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-1 md:gap-6">
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-4 md:p-6 text-center">
                 <h2>STEP 1</h2>
                 <h3 className="text-waterboy-700 font-bold text-xl mb-2">Get Started</h3>
                 <p className="text-gray-600">Sign up or sontact us to begin</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-4 md:p-6 text-center">
                 <h2>STEP 2</h2>
                 <h3 className="text-waterboy-700 font-bold text-xl mb-2">Pick your day</h3>
                 <p className="text-gray-600">Choose your best weekly delivery day</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-4 md:p-6 text-center">
                 <h2>STEP 3</h2>
                 <h3 className="text-waterboy-700 font-bold text-xl mb-2">Simple payment options</h3>
                 <p className="text-gray-600">Card, EFT, Debit Order or cash</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-4 md:p-6 text-center">
                 <h2>STEP 4</h2>
                 <h3 className="text-waterboy-700 font-bold text-xl mb-2">You're all set</h3>
                 <p className="text-gray-600">Water delivered - it's that simple</p>
@@ -100,30 +100,30 @@ const AboutSection = () => {
           <h2 className="section-heading">What makes us unique</h2>
         </div>
         
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-16 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-            <CardContent className="p-6 text-center">
+            <CardContent className="p-4 md:p-6 text-center">
               <h3 className="text-waterboy-700 font-bold text-xl mb-2">Hassle Free</h3>
               <p className="text-gray-600">Easy ordering and regular deliveries</p>
             </CardContent>
           </Card>
-          
+
           <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-            <CardContent className="p-6 text-center">
+            <CardContent className="p-4 md:p-6 text-center">
               <h3 className="text-waterboy-700 font-bold text-xl mb-2">No Contracts</h3>
               <p className="text-gray-600">No long-term commitments required</p>
             </CardContent>
           </Card>
-          
+
           <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-            <CardContent className="p-6 text-center">
+            <CardContent className="p-4 md:p-6 text-center">
               <h3 className="text-waterboy-700 font-bold text-xl mb-2">No Deposits</h3>
               <p className="text-gray-600">Start service without upfront fees</p>
             </CardContent>
           </Card>
-          
+
           <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-            <CardContent className="p-6 text-center">
+            <CardContent className="p-4 md:p-6 text-center">
               <h3 className="text-waterboy-700 font-bold text-xl mb-2">No Hidden Costs</h3>
               <p className="text-gray-600">Transparent pricing and billing</p>
             </CardContent>

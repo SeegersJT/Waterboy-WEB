@@ -14,7 +14,7 @@ const LocationsSection = () => {
 
         <div className="grid grid-cols-1 gap-12">
           <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <div className="bg-white p-6 rounded-xl shadow-sm">
                 <h4 className="text-xl font-bold text-waterboy-600 mb-3">Head Office</h4>
                 <p className="text-gray-700 text-lg font-medium">Potchefstroom</p>

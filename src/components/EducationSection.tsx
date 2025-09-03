@@ -48,9 +48,9 @@ const EducationSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 auto-rows-fr">
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-1 flex flex-col items-center justify-center h-full text-center">
+              <CardContent className="p-4 md:p-6 flex flex-col items-center justify-center h-full text-center">
                 <div className="bg-waterboy-100 p-3 rounded-full mb-4">
                   <Droplets className="h-8 w-8 text-waterboy-600" />
                 </div>
@@ -59,7 +59,7 @@ const EducationSection = () => {
             </Card>
             
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center justify-center h-full text-center">
+              <CardContent className="p-4 md:p-6 flex flex-col items-center justify-center h-full text-center">
                 <div className="bg-waterboy-100 p-3 rounded-full mb-4">
                   <svg className="h-8 w-8 text-waterboy-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="10"/>
@@ -71,7 +71,7 @@ const EducationSection = () => {
             </Card>
             
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center justify-center h-full text-center">
+              <CardContent className="p-4 md:p-6 flex flex-col items-center justify-center h-full text-center">
                 <div className="bg-waterboy-100 p-3 rounded-full mb-4">
                   <svg className="h-8 w-8 text-waterboy-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -85,7 +85,7 @@ const EducationSection = () => {
             </Card>
             
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center justify-center h-full text-center">
+              <CardContent className="p-4 md:p-6 flex flex-col items-center justify-center h-full text-center">
                 <div className="bg-waterboy-100 p-3 rounded-full mb-4">
                   <svg className="h-8 w-8 text-waterboy-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -96,7 +96,7 @@ const EducationSection = () => {
             </Card>
 
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center justify-center h-full text-center">
+              <CardContent className="p-4 md:p-6 flex flex-col items-center justify-center h-full text-center">
                 <div className="bg-waterboy-100 p-3 rounded-full mb-4">
                   <svg className="h-8 w-8 text-waterboy-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -107,7 +107,7 @@ const EducationSection = () => {
             </Card>
 
             <Card className="bg-waterboy-50 border-none hover:shadow-md transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center justify-center h-full text-center">
+              <CardContent className="p-4 md:p-6 flex flex-col items-center justify-center h-full text-center">
                 <div className="bg-waterboy-100 p-3 rounded-full mb-4">
                   <svg className="h-8 w-8 text-waterboy-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -117,7 +117,7 @@ const EducationSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="md:col-span-2 border-none bg-gradient-to-br from-waterboy-600 to-waterboy-800 text-white">
+            <Card className="col-span-2 border-none bg-gradient-to-br from-waterboy-600 to-waterboy-800 text-white">
               <CardContent className="p-8 flex flex-col items-center text-center">
                 <h3 className="text-2xl font-bold mb-4">Don't Wait... Call Now!</h3>
                 <p className="mb-6">Start your water delivery service today and experience the difference</p>
