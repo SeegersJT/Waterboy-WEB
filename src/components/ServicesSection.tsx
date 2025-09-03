@@ -16,6 +16,7 @@ import bottles from "@/assets/bottles.png";
 import containers from "@/assets/containers.jpg";
 import coolers from "@/assets/coolers.png";
 import refills from "@/assets/refills.jpg";
+import OrderRequestModal from "./OrderRequestModal";
 
 const ServiceCard = ({
   title,
@@ -34,26 +35,29 @@ const ServiceCard = ({
 }) => (
   <Card className="border-waterboy-100 hover:shadow-lg transition-shadow h-full flex flex-col relative overflow-hidden">
     {watermark && (
-      <img
-        src={watermark}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none"
-      />
+      <>
+        <img
+          src={watermark}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover opacity-80 pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-waterboy-50/80 via-white/60 to-white/90 pointer-events-none" />
+      </>
     )}
-    <CardHeader className="pb-4 relative z-10">
+    <CardHeader className="pb-4 relative z-10 drop-shadow-sm">
       <div className={`${iconColor} mb-4 flex items-center`}>
         <Icon size={24} className="mr-2" />
         <CardTitle className="text-xl">{title}</CardTitle>
       </div>
     </CardHeader>
-    <CardContent className="flex-grow flex flex-col relative z-10">
-      <p className="text-gray-600 mb-6">{description}</p>
+    <CardContent className="flex-grow flex flex-col relative z-10 drop-shadow-sm">
+      <p className="text-gray-700 mb-6">{description}</p>
       <div className="mb-6 flex-grow">
         <ul className="space-y-2">
           {features.map((feature, index) => (
             <li key={index} className="flex items-start">
               <Check className="h-4 w-4 text-waterboy-500 mr-2 mt-0.5 flex-shrink-0" />
-              <span className="text-sm text-gray-600">{feature}</span>
+              <span className="text-sm text-gray-700">{feature}</span>
             </li>
           ))}
         </ul>
@@ -65,6 +69,7 @@ const ServiceCard = ({
 const ServicesSection = () => {
   const [containerCount, setContainerCount] = useState(1);
   const [includeCooler, setIncludeCooler] = useState(false);
+  const [showOrderModal, setShowOrderModal] = useState(false);
 
   const COOLER_RENTAL_PRICE = 200;
   const containerPrice = 200 + (containerCount - 1) * 100;
@@ -88,7 +93,7 @@ const ServicesSection = () => {
             description="We deliver purified water to your doorstep on a weekly basis."
             icon={Home}
             iconColor="text-waterboy-500"
-            watermark={bottles}
+            watermark={containers}
             features={[
               "Weekly delivery on a specific day",
               "Clean containers provided by us",
@@ -102,7 +107,7 @@ const ServicesSection = () => {
             description="Rent a water cooler with warm and cold water options."
             icon={Database}
             iconColor="text-waterboy-600"
-            watermark={containers}
+            watermark={coolers}
             features={[
               "Both hot and cold water options",
               "Weekly water delivery included",
@@ -116,7 +121,7 @@ const ServicesSection = () => {
             description="We offer refill and coupon services at the Waterboy operations hub."
             icon={Recycle}
             iconColor="text-waterboy-700"
-            watermark={coolers}
+            watermark={refills}
             features={[
               "Bring your own containers",
               "Available at 22 Scheepers Ave",
@@ -129,7 +134,7 @@ const ServicesSection = () => {
             description="Get you pure and fresh water bottles available for your business or event."
             icon={Droplet}
             iconColor="text-waterboy-400"
-            watermark={refills}
+            watermark={bottles}
             features={[
               "500ml bottles",
               "1 Liter bottles",
@@ -189,19 +194,37 @@ const ServicesSection = () => {
               </span>
             </label>
 
-            <div className="space-y-1 text-center">
-              <div className="text-gray-700">
-                Containers: R{containerPrice} / mo
+            <div className="space-y-3 text-center">
+              <div className="flex justify-center flex-wrap gap-2">
+                <span className="px-3 py-1 text-sm text-gray-700 bg-gray-100 rounded-full">
+                  Containers: R{containerPrice} / mo
+                </span>
+                {includeCooler && (
+                  <span className="px-3 py-1 text-sm text-gray-700 bg-gray-100 rounded-full">
+                    Cooler: R{coolerPrice} / mo
+                  </span>
+                )}
               </div>
-              {includeCooler && (
-                <div className="text-gray-700">Cooler: R{coolerPrice} / mo</div>
-              )}
               <div className="text-xl font-bold text-waterboy-700">
                 Total: R{totalPrice} per month
               </div>
             </div>
+
+            <Button
+              onClick={() => setShowOrderModal(true)}
+              className="w-full bg-waterboy-500 hover:bg-waterboy-600"
+            >
+              Order Now
+            </Button>
           </div>
         </div>
+        <OrderRequestModal
+          isOpen={showOrderModal}
+          onClose={() => setShowOrderModal(false)}
+          containerCount={containerCount}
+          includeCooler={includeCooler}
+          totalPrice={totalPrice}
+        />
       </div>
     </section>
   );
