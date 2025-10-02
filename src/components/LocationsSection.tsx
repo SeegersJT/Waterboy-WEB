@@ -21,7 +21,16 @@ const LocationsSection = () => {
                 <p className="text-gray-700 text-lg font-medium">
                   Potchefstroom
                 </p>
-                <p className="text-gray-600 mt-1">+27 78 906 9543</p>
+                <p className="text-gray-600 mt-1">
+                  {" "}
+                  <a
+                    href="tel:+27789069543"
+                    className="text-1xl font-bold hover:underline"
+                  >
+                    +27 78 906 9543
+                  </a>
+                </p>
+
                 <p className="text-gray-600 mt-1">Main operations hub</p>
               </div>
 
@@ -32,21 +41,56 @@ const LocationsSection = () => {
                   </h4>
                   <ul className="space-y-2">
                     <li className="text-gray-700 break-words">
-                      <p>Bloemfontein - +27 72 408 6701</p>
+                      <p>
+                        Potchefstroom
+                        <a
+                          href="tel:+27789069543"
+                          className="text-1xl font-bold hover:underline pl-2"
+                        >
+                          +27 78 906 9543
+                        </a>
+                      </p>
                     </li>
                     <li className="text-gray-700 break-words">
-                      <p>Kimberley - +27 64 648 9082</p>
+                      <p>
+                        Bloemfontein
+                        <a
+                          href="tel:+27724086701"
+                          className="text-1xl font-bold hover:underline pl-2"
+                        >
+                          +27 72 408 6701
+                        </a>
+                      </p>
                     </li>
                     <li className="text-gray-700 break-words">
-                      <p>Krugersdorp - +27 73 486 1302</p>
+                      <p>
+                        Kimberley
+                        <a
+                          href="tel:+27646489082"
+                          className="text-1xl font-bold hover:underline pl-2"
+                        >
+                          +27 64 648 9082
+                        </a>
+                      </p>
+                    </li>
+                    <li className="text-gray-700 break-words">
+                      <p>
+                        Krugersdorp
+                        <a
+                          href="tel:+27734861302"
+                          className="text-1xl font-bold hover:underline pl-2"
+                        >
+                          +27 73 486 1302
+                        </a>
+                      </p>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
               <Card className="bg-white shadow-sm">
-                <CardContent className="p-6 flex items-center justify-center">
-                  <h4 className="text-xl font-bold text-waterboy-600 text-center">
+                <CardContent className="p-6 flex items-center justify-center text-center h-full">
+                  <h4 className="text-xl font-bold text-waterboy-600">
                     PRIME LOCATIONS FOR NEW WATERBOY OPPORTUNITIES AVAILABLE
                   </h4>
                 </CardContent>
