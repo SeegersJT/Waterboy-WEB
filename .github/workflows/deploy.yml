@@ -3,7 +3,7 @@ name: 🚀 Deploy React App to KonsoleH
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-deploy:
