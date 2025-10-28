@@ -8,23 +8,38 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    name: 🌙 Build & Deploy to Production
 
     steps:
-      - name: Checkout code
+      - name: 🧩 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: ⚙️ Setup Node.js (Latest LTS)
         uses: actions/setup-node@v4
         with:
-          node-version: lts
+          node-version: 'lts/*'
 
-      - name: Install dependencies
+      - name: 📦 Restore npm cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 📥 Install dependencies
         run: npm ci
 
-      - name: Build project
+      - name: 🏗️ Build React App
         run: npm run build
 
-      - name: Deploy via FTP
+      - name: 📤 Upload build artifacts (for inspection)
+        uses: actions/upload-artifact@v4
+        with:
+          name: 🧱 dist-folder
+          path: dist
+
+      - name: 🚚 Deploy via FTP to KonsoleH
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
@@ -35,3 +50,6 @@ jobs:
           protocol: ftp
           dangerous-clean-slate: true
           port: 21
+
+      - name: ✅ Deployment Complete!
+        run: echo "🎉 Deployment to KonsoleH successful!"
