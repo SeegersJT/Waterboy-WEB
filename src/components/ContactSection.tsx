@@ -278,7 +278,7 @@ const ContactSection = () => {
                 <ul className="space-y-3">
                   <li className="flex justify-between">
                     <span className="text-gray-700">Monday - Friday</span>
-                    <span className="font-medium">8:00 AM - 5:00 PM</span>
+                    <span className="font-medium">7:30 - 17:00</span>
                   </li>
                   <li className="flex justify-between">
                     <span className="text-gray-700">Saturday</span>
