@@ -84,6 +84,17 @@ const LocationsSection = () => {
                         </a>
                       </p>
                     </li>
+                    <li className="text-gray-700 break-words">
+                      <p>
+                        Klerksdorp
+                        <a
+                          href="tel:+27662422942"
+                          className="text-1xl font-bold hover:underline pl-2"
+                        >
+                          +27 66 242 2942
+                        </a>
+                      </p>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
